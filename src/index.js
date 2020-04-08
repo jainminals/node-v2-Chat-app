@@ -74,13 +74,6 @@ io.on('connection' , (socket)=>{
         }
     })
     
-    // socket.emit('countUpdate' , count)
-    // socket.on('increment',()=>{
-    //     count++
-    //     //socket.emit('countUpdate',count)  // for single client
-    //     io.emit('countUpdate',count)// to all user
-
-    // })
 })
 
 

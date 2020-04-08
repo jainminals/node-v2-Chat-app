@@ -12,9 +12,6 @@ const sidebarTemplate = document.querySelector('#sidebar-template').innerHTML
 //Options
 
 const {username,room} = Qs.parse(location.search,{ ignoreQueryPrefix: true })
-
-try {
-
     const autoscroll = () =>{
             //New message element
         const $newMessage = $messages.lastElementChild
@@ -36,9 +33,6 @@ try {
         if(containerHeight - newMessageHeight <=  scrollOffset){
             $messages.scrollTop =  $messages.scrollHeight
         }
-        
-
-        console.log(visibleHeight)
     }
 
  //----------------message----------------------   
@@ -77,11 +71,6 @@ try {
         })
         document.querySelector('#sidebar').innerHTML = html
     })
-    
-} catch(e) {
-    console.log(e);
-}
-
 //server(emit) -> client(receive) --acknowledgment --> server
 //client(emit) -> server(receive) --acknowledgment --> client
 $messageForm.addEventListener('submit',(e)=>{
