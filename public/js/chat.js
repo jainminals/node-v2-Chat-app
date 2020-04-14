@@ -36,7 +36,7 @@ const {username,room} = Qs.parse(location.search,{ ignoreQueryPrefix: true })
     }
 
  //----------------message----------------------   
-    var socket = io.connect('http://localhost');
+    var socket = io.connect('http://localhost/');
     socket.on('message', (message) =>{
         console.log(message)
         const html = Mustache.render(messageTemplate,{
