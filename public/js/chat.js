@@ -1,3 +1,4 @@
+const io = require('socket.io')
 //Elements
 const $messageForm = document.querySelector('#message-form')
 const $messageFormInput = $messageForm.querySelector('input')
@@ -36,7 +37,7 @@ const {username,room} = Qs.parse(location.search,{ ignoreQueryPrefix: true })
     }
 
  //----------------message----------------------   
- const io = require('socket.io')
+ 
     var socket = io.connect('http://localhost:3000')
     socket.on('message', (message) =>{
         console.log(message)
